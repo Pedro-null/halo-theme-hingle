@@ -1,0 +1,72 @@
+# 配置详情请参考：https://docs.halo.run/zh/developer-guide/theme/config-files
+genernal:
+  label: 基本设置
+  items:
+    author_text:
+      name: author_text
+      label: '作者寄语'
+      type: textarea
+      placeholder: '可以插入作者自述、版权说明等内容，字符串格式，支持 HTML 内容。'
+    icp:
+      name: icp
+      label: 'ICP 备案号'
+      type: text
+      placeholder: '填入 ICP 备案号，没有则不填.'
+    background:
+      name: background
+      label: 主题背景
+      type: text
+      default: 'https://api.paugram.com/wallpaper?source=gh'
+      placeholder: '在此填写主题地址'
+
+    code_css_url:
+      name: code_css_url
+      label: 代码样式地址
+      type: text
+      default: 'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'
+      placeholder: '代码样式地址'
+      
+    night:
+      name: night
+      label: 自动切换夜间模式
+      type: radio
+      data-type: bool
+      default: true
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+    copyright:
+      name: copyright
+      label: 复制的时候弹出保留原站链接说明
+      type: radio
+      data-type: bool
+      default: true
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
+
+social:
+  label: 社交链接
+  # 表单项
+  items:
+    weibo:
+      name: weibo
+      label: 微博
+      type: text
+      placeholder: '在此填写微博地址'
+    Github:
+      name: Github 
+      label: Github 
+      type: text          
+      placeholder: '在此填写 Github 链接' 
+    Home:
+      name: Home
+      label: 首页
+      type: text
+      placeholder: '在此填写首页地址'
