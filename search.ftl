@@ -3,54 +3,42 @@
 
 <main>
     <div class="wrap min">
-        <#--  <section class="home-title">
-            <h1>${blog_title!}</h1>
-            <span>${user.description!}</span>
-            <#include "module/social.ftl">
-        </section>  -->
         <section class="home-title">
-            <h1>搜索结果：${keyword!}</h1>
+            <h1>含关键词“${keyword!}”的文章</h1>
         </section>
 
-        <#--  结果列表  -->
+        <#--  文章列表  -->
 
         <section class="home-posts">
-            <#if posts?? && posts.content?size gt 0>
-                <#list posts.content as post>
-                    <#--  <li>
-                        <a href="${post.fullPath!}">${post.title}</a>
-                    </li>  -->
-                    <div class="post-item">
-                        <h2>
-                            <a href="${post.fullPath!}">${post.title}</a>
-                        </h2>
-                        <p> ${post.summary!} </p>
-                        <div class="post-meta">
-                            <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
-                            <#if (post.categories)?? && post.categories?size !=0>
-                                <#list post.categories as categorie>
-                                    <span class="category">${categorie.name!}</span>
-                                </#list>
-                            </#if>
-                            <#if (post.tags)?? && post.tags?size !=0>
-                                <#list post.tags as tags>
-                                    <span class="tags">${tags.name!}</span>
-                                </#list>
-                            </#if>
-                        </div>
-                    </div>
-                </#list>
-            <#else>
+        <#if posts?? && posts.content?size gt 0>
+            <#list posts.content as post>
                 <div class="post-item">
-                    <h3 class="page-title">没有找到任何东西！</h3>
+                    <h2>
+                        <a href="${post.fullPath!}">${post.title}</a>
+                    </h2>
+                    <p> ${post.summary!} </p>
+                    <div class="post-meta">
+                        <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
+                        <#if (post.categories)?? && post.categories?size !=0>
+                            <#list post.categories as categorie>
+                                <span class="category">${categorie.name!}</span>
+                            </#list>
+                        </#if>
+                        
+                        <span class="comments">${post.commentCount!} ℃</span>
+                        
+                    </div>
                 </div>
-            </#if>
+            </#list>
+        <#else>
+            <p>没有找到结果 (QWQ)</p>
+        </#if>
         </section>
 
         <#--  分页  -->
         <section class="page-navigator">
             <#if posts.totalPages gt 1>
-                <@paginationTag method="index" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <@paginationTag method="search" page="${posts.number}" total="${posts.totalPages}" display="3">
                     <#if pagination.hasPrev>
                         <a class="extend prev" rel="prev" href="${pagination.prevPageFullPath!}">«</a>
                     </#if>

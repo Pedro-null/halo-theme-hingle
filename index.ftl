@@ -29,11 +29,9 @@
                                 <span class="category">${categorie.name!}</span>
                             </#list>
                         </#if>
-                        <#if (post.tags)?? && post.tags?size !=0>
-                            <#list post.tags as tags>
-                                <span class="tags">${tags.name!}</span>
-                            </#list>
-                        </#if>
+                        
+                        <span class="comments">${post.commentCount!} ℃</span>
+
                     </div>
                 </div>
             </#list>

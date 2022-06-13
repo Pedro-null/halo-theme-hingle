@@ -4,7 +4,7 @@
             <i class="fa fa-weibo"></i>
         </a>            
     </#if>
-    <#if (settings.Github)?? && settings.weibo?trim != ''>
+    <#if (settings.Github)?? && settings.Github?trim != ''>
         <a href="${settings.Github!}" title="Github">
             <i class="fa fa-github"></i>
         </a>            

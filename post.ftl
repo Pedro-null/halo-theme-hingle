@@ -24,6 +24,8 @@
                     </span>
                 </#if>
 
+                <span class="view">${post.visits!}</span>
+
             </div>
         </section>
         <article class="post-content">

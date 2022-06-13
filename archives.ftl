@@ -6,31 +6,31 @@
         <#--  <section class="home-title">  -->
             
                 <section class="home-posts">
-                <#list archives as archive>
-                <h1 class="page-title">${archive.year?c}</h1>                   
-                    <#list archive.posts as post>
-                        <div class="post-item">
-                            <h2>
-                                <a href="${post.fullPath!}">${post.title}</a>
-                            </h2>
-                            <#--  文章摘要  -->
-                            <#--  <p> ${post.summary!} </p>  -->
-                            <div class="post-meta">
-                                <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
-                                <#if (post.categories)?? && post.categories?size !=0>
-                                    <#list post.categories as categorie>
-                                        <span class="category">${categorie.name!}</span>
-                                    </#list>
-                                </#if>
-                                <#if (post.tags)?? && post.tags?size !=0>
-                                    <#list post.tags as tags>
-                                        <span class="tags">${tags.name!}</span>
-                                    </#list>
-                                </#if>
+                <@postTag method="archiveMonth">
+                    <#list archives as archive>
+                    <h1 class="page-title">${archive.year?c}-${archive.month?c}</h1>                   
+                        <#list archive.posts as post>
+                            <div class="post-item">
+                                <h2>
+                                    <a href="${post.fullPath!}">${post.title}</a>
+                                </h2>
+                                <#--  文章摘要  -->
+                                <#--  <p> ${post.summary!} </p>  -->
+                                <div class="post-meta">
+                                    <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
+                                    <#if (post.categories)?? && post.categories?size !=0>
+                                        <#list post.categories as categorie>
+                                            <span class="category">${categorie.name!}</span>
+                                        </#list>
+                                    </#if>
+                                    
+                                    <span class="comments">${post.commentCount!} ℃</span>
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </#list> 
-                    </#list>                   
+                        </#list> 
+                    </#list>
+                </@postTag>                   
                 </section>
             
         <#--  </section>  -->

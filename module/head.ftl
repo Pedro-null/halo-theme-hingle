@@ -1,31 +1,22 @@
 <head>
     <meta charset="UTF-8">
-    <!-- <%- favicon_tag("static/img/icon.png") %> -->
+    
     <link rel="icon" href="${blog_logo!}" sizes="192x192"/>
 
-    <#--  <%- css("static/kico.css", "static/hingle.css") %>
-    <%- css("https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css") %>  -->
     <link rel="stylesheet" href="${theme_base!}/source/static/kico.css"/>
     <link rel="stylesheet" href="${theme_base!}/source/static/hingle.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css"/>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
-    <#--  <meta property="og:site_name" content="<%= config.title %>">  -->
     <meta property="og:site_name" content="${blog_title!}">
-    <#--  <meta property="og:title" content="<%= page.title %>"/>      -->
-    <#--  <meta property="og:title" content="${sheet.title!}"/>  -->
-
-    <#--  <% if (theme.background) { %>
-    <style>body:before{ content: ''; background-image: url(<%- theme.background %>) }</style>
-    <% } %>  -->
+    
     <#if settings.background?? && settings.background != ''>
         <style>body:before{ content: ''; background-image: url(${settings.background!}) }</style>
     </#if>
 
-    <#--文章界面需要引入的CSS-->
+    <#--文章界面需要引入的CSS、js-->
     <#if is_post??>
-    <#--Github MarkDown的引入-->
-        <link rel="stylesheet" href="${theme_base!}/source/css/github-markdown.css">
+    
     <#--代码高亮用到的CSS-->
         <link href="${settings.code_css_url!'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'}"
                 rel="stylesheet">
@@ -103,22 +94,6 @@
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/xml.min.js"></script>
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/yaml.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
-
-        <script>
-            //var displayReadProgress = <#if (settings.open_read_progress)??>${settings.open_read_progress?c}<#else>true</#if>;
-            var displayLineNumber = <#if (settings.line_number)??>${settings.line_number?c}<#else>true</#if>;
-            var enableCodeCopy = <#if (settings.code_copy)??>${settings.code_copy?c}<#else>true</#if>;
-            var displayCodeType = <#if (settings.code_type)??>${settings.code_type?c}<#else>true</#if>;
-            //var displayMobileCatalog = <#if (settings.mobile_catalog)??>${settings.mobile_catalog?c}<#else>true</#if>;
-            //var linkOnBlackPage = <#if (settings.link_on_blank_page)??>${settings.link_on_blank_page?c}<#else>true</#if>;
-            //var enableShare = <#if (settings.open_share)??>${settings.open_share?c}<#else>true</#if>;
-            //var twitterAccountShare = `${settings.twitter_account_share!}`;
-            //var postTitle = `${post.title!}`;
-            //var blogTitle = `${blog_title!}`;
-            //var blogUrl = `${blog_url!}`;
-        </script>
-
-         <script type="text/javascript" src="${theme_base!}/source/js/post.js"></script>
     
     </#if>    
     
