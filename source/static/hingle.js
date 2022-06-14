@@ -46,49 +46,52 @@ var Paul_Hingle = function (config) {
 
     // 目录树
     this.tree = function () {
-        var id = 1;
-        var wrap = ks.select(".wrap");
-        var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
+        if(isPost){
+            var id = 1;
+            var wrap = ks.select(".wrap");
+            var headings = content.querySelectorAll("h1, h2, h3, h4, h5, h6");
 
-        if(headings.length > 0){
-            body.classList.add("has-trees");
+            if(headings.length > 0){
+                body.classList.add("has-trees");
 
-            var trees = ks.create("section", {
-                class: "article-list",
-                html: "<h4><span class=\"title\">目录</span></h4>"
-            });
+                var trees = ks.create("section", {
+                    class: "article-list",
+                    html: "<h4><span class=\"title\">目录</span></h4>"
+                });
 
-            ks.each(headings, function (t) {
-                var cls, text = t.innerText;
+                ks.each(headings, function (t) {
+                    var cls, text = t.innerText;
 
-                t.id = "title-" + id;
+                    t.id = "title-" + id;
 
-                switch (t.tagName){
-                    case "H2": cls = "item-2"; break;
-                    case "H3": cls = "item-3"; break;
-                    case "H4": cls = "item-4"; break;
-                    case "H5": cls = "item-5"; break;
-                    case "H6": cls = "item-6"; break;
+                    switch (t.tagName){
+                        case "H2": cls = "item-2"; break;
+                        case "H3": cls = "item-3"; break;
+                        case "H4": cls = "item-4"; break;
+                        case "H5": cls = "item-5"; break;
+                        case "H6": cls = "item-6"; break;
+                    }
+
+                    trees.appendChild(ks.create("a", {class: cls, text: text, href: "#title-" + id}));
+
+                    id++;
+                });
+
+                wrap.appendChild(trees);
+
+                function toggle_tree() {
+                    var buttons = ks.select("footer .buttons");
+                    var btn = ks.create("a", {class: "toggle-list"});
+                    buttons.appendChild(btn);
+
+                    btn.addEventListener("click", function () {
+                        trees.classList.toggle("active");
+                    })
                 }
-
-                trees.appendChild(ks.create("a", {class: cls, text: text, href: "#title-" + id}));
-
-                id++;
-            });
-
-            wrap.appendChild(trees);
-
-            function toggle_tree() {
-                var buttons = ks.select("footer .buttons");
-                var btn = ks.create("a", {class: "toggle-list"});
-                buttons.appendChild(btn);
-
-                btn.addEventListener("click", function () {
-                    trees.classList.toggle("active");
-                })
+                toggle_tree();
             }
-            toggle_tree();
         }
+        
     };
 
     // 自动添加外链
@@ -136,7 +139,7 @@ var Paul_Hingle = function (config) {
     window.addEventListener("scroll", this.to_top);
 
     // 如果开启自动夜间模式
-    if(config.night){
+    if(ThemeConfig.night){
         var hour = new Date().getHours();
 
         if(document.cookie.indexOf("night") === -1 && (hour <= 5 || hour >= 22)){
@@ -154,28 +157,12 @@ var Paul_Hingle = function (config) {
     }
 
     // 如果开启复制内容提示
-    if(config.copyright){
+    if(ThemeConfig.copyright){
         document.oncopy = function () {
             ks.notice("复制内容请注明来源并保留版权信息！", {color: "yellow", overlay: true})
         };
     }
-
-    //
-    // ! Hexo 特别功能
-    //
-
-    // Hexo 百度搜索
-    // this.hexo_search = function () {
-    //     var form = ks.select(".head-search"), input = ks.select(".head-search input");
-
-    //     form.onsubmit = function (ev) {
-    //         ev.preventDefault();
-
-    //         window.open("https://www.baidu.com/s?wd=site:" + location.host + " " + input.value.trim());
-    //     }        
-    // }
-
-    // this.hexo_search();
+    
 };
 
 // 图片缩放

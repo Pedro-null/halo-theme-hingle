@@ -2,38 +2,51 @@
 <@layout title="归档 - ${blog_title!}">
 
 <main>
+    <style>
+        .time-title:before{
+            content: "#";
+            color: #6f9fc7;
+            color: var(--blue);
+            margin-right: .5em;
+        }
+
+        h1.time-title{                
+            margin-bottom: 1em;
+            transition: border 0.3s;
+            border-bottom: 1px solid #ddd;
+            border-color: var(--border);
+            animation: fade-in-bottom .3s both;
+            -webkit-animation: fade-in-bottom .3s both;
+        }
+    </style>
     <div class="wrap min">
-        <#--  <section class="home-title">  -->
-            
-                <section class="home-posts">
+        <section class="home-posts">
                 <@postTag method="archiveMonth">
-                    <#list archives as archive>
-                    <h1 class="page-title">${archive.year?c}-${archive.month?c}</h1>                   
-                        <#list archive.posts as post>
-                            <div class="post-item">
-                                <h2>
-                                    <a href="${post.fullPath!}">${post.title}</a>
-                                </h2>
-                                <#--  文章摘要  -->
-                                <#--  <p> ${post.summary!} </p>  -->
-                                <div class="post-meta">
-                                    <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
-                                    <#if (post.categories)?? && post.categories?size !=0>
-                                        <#list post.categories as categorie>
-                                            <span class="category">${categorie.name!}</span>
-                                        </#list>
-                                    </#if>
-                                    
-                                    <span class="comments">${post.commentCount!} ℃</span>
-                                    
-                                </div>
+                <#list archives as archive>
+                <h1 class="time-title">${archive.year?c}-${archive.month?c}</h1>                   
+                    <#list archive.posts as post>
+                        <div class="post-item">
+                            <h2>
+                                <a href="${post.fullPath!}">${post.title}</a>
+                            </h2>
+                            <#--  文章摘要  -->
+                            <#--  <p> ${post.summary!} </p>  -->
+                            <div class="post-meta">
+                                <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
+                                <#if (post.categories)?? && post.categories?size !=0>
+                                    <#list post.categories as categorie>
+                                        <span class="category">${categorie.name!}</span>
+                                    </#list>
+                                </#if>
+                                
+                                <span class="comments">${post.commentCount!} ℃</span>
+                                
                             </div>
-                        </#list> 
-                    </#list>
-                </@postTag>                   
-                </section>
-            
-        <#--  </section>  -->
+                        </div>
+                    </#list> 
+                </#list>
+            </@postTag>                   
+        </section>
 
         <#--  分页  -->
         <section class="page-navigator">

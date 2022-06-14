@@ -23,6 +23,6 @@
 <script src="${theme_base!}/source/static/kico.js"></script>
 <script src="${theme_base!}/source/static/hingle.js"></script>
 <script> 
-    let jsonstr = JSON.stringify({night: ${settings.night?c}, copyright: ${settings.copyright?c}});
-    var hingle = new Paul_Hingle(jsonstr);
+    let config = JSON.stringify({night: ${settings.night?c}, copyright: ${settings.copyright?c}});
+    var hingle = new Paul_Hingle(config);
 </script> 

@@ -1,5 +1,5 @@
 <#include "module/macro.ftl">
-<@layout title="友情链接 - ${blog_title!}">
+<@layout title="链接 - ${blog_title!}">
     <main>
         <style>
             /* - 友链列表 */
@@ -30,6 +30,8 @@
             .link-friend img{
                 display: block;
                 max-width: 5em;
+                width: 80px;
+                height: 80px;
                 text-align: center;
                 border-radius: 100%;
                 margin: -3em auto .5em auto;
@@ -51,13 +53,13 @@
             }
         </style>
         <div class="wrap min">
-            <section class="home-title">
-                <h1>"链接"</h1>
+            <section class="page-title">
+                <h1>链接</h1>
                 <#--  <h1>"${sheet.title!}"</h1>
                 <span>${sheet.description!}</span>  -->
             </section>
             
-            <section class="home-posts">
+            <section class="post-content">
                 <@linkTag method="listTeams">
                     <section>
                         <#list teams as team>
@@ -73,8 +75,6 @@
                                             <p>${link.description}</p>
                                         </a>
                                     </div>
-                                    
-                                    <#--  <li><a href="${link.url}">${link.name}</a>${link.description}</li>  -->
                                 </#list>
                                 </div>
                             </ul>

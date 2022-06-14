@@ -41,53 +41,8 @@
                         </a>
                     </#if>
                 </@paginationTag>
-            <#--  <#else>
-                <span>当前只有一页</span>  -->
             </#if>
         </section>
     </div>
 </main>
 </@layout>
-
-
-<#--  
-<main class="self-container mdui-container">
-  <div class="containerLeft">
-    <article class="post">
-      <div class="mdui-card">
-      <div class="journals">
-        <h3 class="pagetitle">说说</h3>
-        <ul class="journalList">
-        <#list journals.content as journal>
-          <li>
-            <div class="journLine">
-              <i class="mdui-icon material-icons mdui-text-color-theme">create</i>
-            </div>
-            <div class="mdui-card">
-              <time>
-                ${journal.createTime?string('yyyy-MM-dd HH:mm:ss')}
-              </time>
-              <div class="mdui-typo">
-                ${journal.content!}
-              </div>
-              <div class="journBottom">
-                <div class="jbleft">
-                  <span>${journal.likes!0}</span>
-                  <i id="${journal.id}" class="mdui-icon material-icons likeb">favorite</i>
-                </div>
-              </div>
-            </div>
-          </li>
-        </#list>
-        </ul>
-        <@paginationTag method="journals" page="${journals.number}" total="${journals.totalPages}" display="3">
-          <#if pagination.hasNext>
-              <button data-href="${pagination.nextPageFullPath!}" class="mdui-btn mdui-btn-raised mdui-btn-dense mdui-ripple mdui-center ajaxPostLists">加载更多</button>
-          </#if>
-        </@paginationTag>
-      </div>
-      </div>
-    </article>
-   
-  </div>  
-</main>  -->

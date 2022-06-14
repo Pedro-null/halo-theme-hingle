@@ -2,6 +2,11 @@
 <@layout title="${sheet.title!} - ${blog_title!}">
     <main>
         <div class="wrap min">
+            <section class="page-title">
+                <h1>${sheet.title!}</h1>
+                <#--  <span>${category.description!}</span>  -->
+            </section>
+
             <article class="post-content">
                 ${sheet.formatContent!}
             </article>

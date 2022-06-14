@@ -14,8 +14,18 @@
         <style>body:before{ content: ''; background-image: url(${settings.background!}) }</style>
     </#if>
 
+    <script>
+        var isPost = false;
+        //获取主题配置
+        var ThemeConfig = {};
+        ThemeConfig['night'] = ${settings.night?c};
+        ThemeConfig['copyright'] = ${settings.copyright?c};
+    </script>
+
     <#--文章界面需要引入的CSS、js-->
     <#if is_post??>
+
+    <script>isPost = true;</script>
     
     <#--代码高亮用到的CSS-->
         <link href="${settings.code_css_url!'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'}"
