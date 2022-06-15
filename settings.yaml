@@ -55,18 +55,54 @@ social:
   label: 社交链接
   # 表单项
   items:
-    weibo:
-      name: weibo
-      label: 微博
-      type: text
-      placeholder: '在此填写微博地址'
     Github:
       name: Github 
       label: Github 
       type: text          
-      placeholder: '在此填写 Github 链接' 
-    Home:
-      name: Home
-      label: 首页
+      placeholder: '在此填写 Github 链接'
+    weibo:
+      name: weibo
+      label: 微博
       type: text
-      placeholder: '在此填写首页地址'
+      placeholder: '在此填写 微博Id' 
+    qq:
+      name: qq
+      label: QQ
+      type: text
+      placeholder: '在此填写 QQ号'
+    telegram:
+      name: telegram
+      label: Telegram
+      type: text
+      placeholder: '在此填写 Telegram Id'
+    twitter_account:
+      name: twitter_account
+      label: Twitter
+      type: text
+      placeholder: '在此填写 Twitter 用户名'
+    facebook:
+      name: facebook
+      label: Facebook
+      type: text
+      placeholder: '在此填写 Facebook 用户名'
+    instagram:
+      name: instagram
+      label: Instagram
+      type: text
+      placeholder: '在此填写 Instagram 用户名'
+    email_address:
+      name: email_address
+      label: 邮箱
+      type: email
+      placeholder: '在此填写 邮箱地址'
+    RSS:
+      name: RSS
+      label: 首页显示RSS图标
+      type: radio
+      data-type: bool
+      default: true
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭

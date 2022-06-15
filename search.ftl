@@ -55,8 +55,6 @@
                         </a>
                     </#if>
                 </@paginationTag>
-            <#--  <#else>
-                <span>当前只有一页</span>  -->
             </#if>
         </section>
     </div>

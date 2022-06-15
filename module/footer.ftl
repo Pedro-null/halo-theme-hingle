@@ -13,7 +13,7 @@
                 <img class="mdui-img-circle" height="24" width="24" src="${blog_logo!}">
                 <a>${blog_title!}</a>
                 <div>© <span id="timeyear">${.now?string('yyyy')}</span> ${user.nickname!} <a href="https://beian.miit.gov.cn/" target="_blank">${settings.icp!}</a></div>
-                <div>Powered by <a href="https://halo.run/" target="_blank">Halo</a>. Theme <a href="https://github.com/pedronull/halo-theme-hingle" target="_blank">Hingle</a> by <a href="https://www.pedronull.xyz/" target="_blank">pedronull</a>.</div>
+                <div>Powered by <a href="https://halo.run/" target="_blank">Halo</a>. Theme <a href="https://github.com/Pedro-null/halo-theme-Hingle" target="_blank">Hingle</a> by <a href="https://www.pedronull.xyz/" target="_blank">pedronull</a>.</div>
             </div>
 
         </section>

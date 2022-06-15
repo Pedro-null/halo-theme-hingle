@@ -5,8 +5,8 @@ author:
   name: Pedro
   website: https://pedronull.xyz
 description: Hingle theme for halo
-logo: https://avatars.githubusercontent.com/u/48195280?s=200&v=4
-website: # https://github.com/halo-dev/halo-theme-quick-starter
-repo: # https://github.com/halo-dev/halo-theme-quick-starter
+logo: http://cdn.sep.cc/avatar/e2d1f9c5da125994d7bf02c691e3124a?s=256&d=identicon
+website: https://github.com/Pedro-null/halo-theme-Hingle
+repo: https://github.com/Pedro-null/halo-theme-Hingle
 version: 1.0.0
 require: 1.4.2

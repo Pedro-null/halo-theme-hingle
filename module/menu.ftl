@@ -1,8 +1,7 @@
 <@menuTag method="list">
     <nav class="head-menu">
     <#--  ?sort_by('priority')：根据菜单的排序编号排序  -->
-    <#list menus?sort_by('priority') as menu>
-    
+    <#list menus?sort_by('priority') as menu>    
         <#if (menu.url == (blog_url))>
             <a href="${blog_url!}">首页</a>            
         <#elseif (menu.url == (categories_url))>

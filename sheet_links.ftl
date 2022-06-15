@@ -72,13 +72,11 @@
                                 
                                 <div class="col-6 col-m-4">
                                     <a class="link-friend" href="${link.url}" target="_blank">
-                                        <img src="${blog_logo!}">
+                                        <img src="${link.logo!}">
                                         <h4>${link.name}</h4>
                                         <p>${link.description}</p>
                                     </a>
                                 </div>
-                                
-                                <#--  <li><a href="${link.url}">${link.name}</a>${link.description}</li>  -->
                             </#list>
                             </div>
                         </ul>
