@@ -1,0 +1,19 @@
+.item img {
+  width: 100%;
+}
+
+.item {
+  padding: 0 0 10px;
+}
+
+h2.photos-team:before{
+    content: "#";
+    color: #6f9fc7;
+    color: var(--blue);
+    margin-right: .5em;
+}
+
+h2.photos-team{                
+    margin-top: 1rem;
+    scroll-margin-top: 5em;
+}

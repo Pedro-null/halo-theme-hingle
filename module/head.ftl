@@ -3,8 +3,8 @@
     
     <link rel="icon" href="${blog_logo!}" sizes="192x192"/>
 
-    <link rel="stylesheet" href="${theme_base!}/source/static/kico.css"/>
-    <link rel="stylesheet" href="${theme_base!}/source/static/hingle.css"/>
+    <link rel="stylesheet" href="${theme_base!}/source/css/kico.css"/>
+    <link rel="stylesheet" href="${theme_base!}/source/css/hingle.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css"/>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>

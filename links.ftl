@@ -55,11 +55,9 @@
         <div class="wrap min">
             <section class="page-title">
                 <h1>链接</h1>
-                <#--  <h1>"${sheet.title!}"</h1>
-                <span>${sheet.description!}</span>  -->
             </section>
             
-            <section class="post-content">
+            <section>
                 <@linkTag method="listTeams">
                     <section>
                         <#list teams as team>
