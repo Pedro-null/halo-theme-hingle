@@ -101,6 +101,12 @@
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/xml.min.js"></script>
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/yaml.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <#--  KaTex 公式渲染  -->
+        <#if settings.KaTex_plugin!false>
+            <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css" rel="stylesheet">
+            <script src="${theme_base!}/source/plugins/katex/dist/katex.min.js"></script>
+        </#if>
     
     </#if>    
     

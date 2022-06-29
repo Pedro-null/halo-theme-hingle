@@ -95,29 +95,31 @@ var Paul_Hingle = function (config) {
     };
 
     // 自动添加外链
-    this.links = function () {
-        var l = content.getElementsByTagName("a");
+    // this.links = function () {
+    //     var l = content.getElementsByTagName("a");
 
-        if(l){
-            ks.each(l, function (t) {
-                t.target = "_blank";
-            });
-        }
-    };
+    //     if(l){
+    //         ks.each(l, function (t) {
+    //             if(t.getAttribute('class') != "footnote-backref"){
+    //                 t.target = "_blank";
+    //             }                
+    //         });
+    //     }
+    // };
 
-    this.comment_list = function () {
-        ks(".comment-content [href^='#comment']").each(function (t) {
-            var item = ks.select(t.getAttribute("href"));
+    // this.comment_list = function () {
+    //     ks(".comment-content [href^='#comment']").each(function (t) {
+    //         var item = ks.select(t.getAttribute("href"));
 
-            t.onmouseover = function () {
-                item.classList.add("active");
-            };
+    //         t.onmouseover = function () {
+    //             item.classList.add("active");
+    //         };
 
-            t.onmouseout = function () {
-                item.classList.remove("active");
-            };
-        });
-    };
+    //         t.onmouseout = function () {
+    //             item.classList.remove("active");
+    //         };
+    //     });
+    // };
 
     // 返回页首
     this.to_top = function () {
@@ -131,8 +133,8 @@ var Paul_Hingle = function (config) {
 
     if(content){
         this.tree();
-        this.links();
-        this.comment_list();
+        // this.links();
+        // this.comment_list();
     }
 
     // 返回页首
