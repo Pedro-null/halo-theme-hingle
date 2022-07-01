@@ -61,7 +61,7 @@
             ${sheet.formatContent!}
         </article>
 
-        <section class="post-content">
+        <section>
             <@linkTag method="listTeams">
                 <section>
                     <#list teams as team>
