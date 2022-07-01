@@ -18,14 +18,24 @@ genernal:
       type: text
       default: 'https://api.paugram.com/wallpaper?source=gh'
       placeholder: '在此填写主题地址'
-
+    KaTex_plugin:
+      name: KaTex_plugin
+      label: KaTex 公式渲染
+      type: radio
+      data-type: bool
+      default: true
+      description: ''
+      options:
+        - value: true
+          label: 开启
+        - value: false
+          label: 关闭
     code_css_url:
       name: code_css_url
       label: 代码样式地址
       type: text
       default: 'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'
-      placeholder: '代码样式地址'
-      
+      placeholder: '代码样式地址'      
     night:
       name: night
       label: 自动切换夜间模式

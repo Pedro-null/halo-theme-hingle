@@ -30,9 +30,6 @@
     <#--代码高亮用到的CSS-->
         <link href="${settings.code_css_url!'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'}"
                 rel="stylesheet">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css" integrity="sha256-0EDwznjUTDEicOuZhOL03fpflUqzhkByvhwol8YGkp4=" crossorigin="anonymous">
-
 
         <#--代码高亮库-->
         <#--官方库的语言种类目前有185种
@@ -104,6 +101,12 @@
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/xml.min.js"></script>
         <script src="https://cdn.staticfile.org/highlight.js/9.18.1/languages/yaml.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script>
+
+        <#--  KaTex 公式渲染  -->
+        <#if settings.KaTex_plugin!false>
+            <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css" rel="stylesheet">
+            <script src="${theme_base!}/source/plugins/katex/dist/katex.min.js"></script>
+        </#if>
     
     </#if>    
     
