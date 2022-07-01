@@ -30,12 +30,206 @@ genernal:
           label: 开启
         - value: false
           label: 关闭
-    code_css_url:
-      name: code_css_url
-      label: 代码样式地址
-      type: text
-      default: 'https://cdn.staticfile.org/highlight.js/9.18.1/styles/github.min.css'
-      placeholder: '代码样式地址'      
+    # 下拉框
+    code_css:
+      name: code_css
+      label: 代码样式
+      # 表单项类型：下拉框
+      type: select              
+      # 数据类型：bool，string，long，double
+      data-type: string           
+      default: github.min.css
+      description: ''
+      options: 
+        - value: a11y-dark.min.css
+          label: a11y-dark
+        - value: a11y-light.min.css
+          label: a11y-light
+        - value: agate.min.css
+          label: agate
+        - value: an-old-hope.min.css
+          label: an-old-hope
+        - value: androidstudio.min.css
+          label: androidstudio
+        - value: arduino-light.min.css
+          label: arduino-light
+        - value: arta.min.css
+          label: arta
+        - value: ascetic.min.css
+          label: ascetic
+        - value: atelier-cave-dark.min.css
+          label: atelier-cave-dark
+        - value: atelier-cave-light.min.css
+          label: atelier-cave-light
+        - value: atelier-dune-dark.min.css
+          label: atelier-dune-dark
+        - value: atelier-dune-light.min.css
+          label: atelier-dune-light
+        - value: atelier-estuary-dark.min.css
+          label: atelier-estuary-dark
+        - value: atelier-estuary-light.min.css
+          label: atelier-estuary-light
+        - value: atelier-forest-dark.min.css
+          label: atelier-forest-dark
+        - value: atelier-forest-light.min.css
+          label: atelier-forest-light
+        - value: atelier-heath-dark.min.css
+          label: atelier-heath-dark
+        - value: atelier-heath-light.min.css
+          label: atelier-heath-light
+        - value: atelier-lakeside-dark.min.css
+          label: atelier-lakeside-dark
+        - value: atelier-lakeside-light.min.css
+          label: atelier-lakeside-light
+        - value: atelier-plateau-dark.min.css
+          label: atelier-plateau-dark
+        - value: atelier-plateau-light.min.css
+          label: atelier-plateau-light
+        - value: atelier-savanna-dark.min.css
+          label: atelier-savanna-dark
+        - value: atelier-savanna-light.min.css
+          label: atelier-savanna-light
+        - value: atelier-seaside-dark.min.css
+          label: atelier-seaside-dark
+        - value: atelier-seaside-light.min.css
+          label: atelier-seaside-light
+        - value: atelier-sulphurpool-dark.min.css
+          label: atelier-sulphurpool-dark
+        - value: atelier-sulphurpool-light.min.css
+          label: atelier-sulphurpool-light
+        - value: atom-one-dark-reasonable.min.css
+          label: atom-one-dark-reasonable
+        - value: atom-one-dark.min.css
+          label: atom-one-dark
+        - value: atom-one-light.min.css
+          label: atom-one-light
+        - value: brown-paper.min.css
+          label: brown-paper
+        - value: brown-papersq.0/styles/brown-papersq.png
+          label: brown-papersq
+        - value: codepen-embed.min.css
+          label: codepen-embed
+        - value: color-brewer.min.css
+          label: color-brewer
+        - value: darcula.min.css
+          label: darcula
+        - value: dark.min.css
+          label: dark
+        - value: default.min.css
+          label: default
+        - value: docco.min.css
+          label: docco
+        - value: dracula.min.css
+          label: dracula
+        - value: far.min.css
+          label: far
+        - value: foundation.min.css
+          label: foundation
+        - value: github-gist.min.css
+          label: github-gist
+        - value: github.min.css
+          label: github
+        - value: gml.min.css
+          label: gml
+        - value: googlecode.min.css
+          label: googlecode
+        - value: gradient-dark.min.css
+          label: gradient-dark
+        - value: grayscale.min.css
+          label: grayscale
+        - value: gruvbox-dark.min.css
+          label: gruvbox-dark
+        - value: gruvbox-light.min.css
+          label: gruvbox-light
+        - value: hopscotch.min.css
+          label: hopscotch
+        - value: hybrid.min.css
+          label: hybrid
+        - value: idea.min.css
+          label: idea
+        - value: ir-black.min.css
+          label: ir-black
+        - value: isbl-editor-dark.min.css
+          label: isbl-editor-dark
+        - value: isbl-editor-light.min.css
+          label: isbl-editor-light
+        - value: kimbie.dark.min.css
+          label: kimbie.dark
+        - value: kimbie.light.min.css
+          label: kimbie.light
+        - value: lightfair.min.css
+          label: lightfair
+        - value: magula.min.css
+          label: magula
+        - value: mono-blue.min.css
+          label: mono-blue
+        - value: monokai-sublime.min.css
+          label: monokai-sublime
+        - value: monokai.min.css
+          label: monokai
+        - value: night-owl.min.css
+          label: night-owl
+        - value: nord.min.css
+          label: nord
+        - value: obsidian.min.css
+          label: obsidian
+        - value: ocean.min.css
+          label: ocean
+        - value: paraiso-dark.min.css
+          label: paraiso-dark
+        - value: paraiso-light.min.css
+          label: paraiso-light
+        - value: pojoaque.0/styles/pojoaque.jpg
+          label: pojoaque
+        - value: pojoaque.min.css
+          label: pojoaque
+        - value: purebasic.min.css
+          label: purebasic
+        - value: qtcreator_dark.min.css
+          label: qtcreator_dark
+        - value: qtcreator_light.min.css
+          label: qtcreator_light
+        - value: railscasts.min.css
+          label: railscasts
+        - value: rainbow.min.css
+          label: rainbow
+        - value: routeros.min.css
+          label: routeros
+        - value: school-book.min.css
+          label: school-book
+        - value: school-book.0/styles/school-book.png
+          label: school-book
+        - value: shades-of-purple.min.css
+          label: shades-of-purple
+        - value: solarized-dark.min.css
+          label: solarized-dark
+        - value: solarized-light.min.css
+          label: solarized-light
+        - value: srcery.min.css
+          label: srcery
+        - value: sunburst.min.css
+          label: sunburst
+        - value: tomorrow-night-blue.min.css
+          label: tomorrow-night-blue
+        - value: tomorrow-night-bright.min.css
+          label: tomorrow-night-bright
+        - value: tomorrow-night-eighties.min.css
+          label: tomorrow-night-eighties
+        - value: tomorrow-night.min.css
+          label: tomorrow-night
+        - value: tomorrow.min.css
+          label: tomorrow
+        - value: vs.min.css
+          label: vs
+        - value: vs2015.min.css
+          label: vs2015
+        - value: xcode.min.css
+          label: xcode
+        - value: xt256.min.css
+          label: xt256
+        - value: zenburn.min.css
+          label: zenburn
+
     night:
       name: night
       label: 自动切换夜间模式
