@@ -1,3 +1,17 @@
+<script>
+    if (document.querySelector("halo-comment")){
+        let comment_box = document.querySelector("halo-comment").shadowRoot.querySelector("#halo-comment");
+
+        if(document.cookie.indexOf("night=true") !== -1){
+            comment_box.classList.remove("light");
+            comment_box.classList.add("dark");
+        }
+        else{
+            comment_box.classList.remove("dark");
+            comment_box.classList.add("light");
+        }
+    };
+</script>
 <footer>
     <style>
         .mdui-img-circle {

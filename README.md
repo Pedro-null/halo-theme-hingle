@@ -26,3 +26,9 @@
 3.  提交代码
 4.  新建 Pull Request
 5.  也欢迎大家提出宝贵的意见，可以在[阑珊的学习笔记留言板](https://pedronull.xyz/s/liu-yan)中留言，也可以在github、gitee上提issues，不过碍于阑珊的前端水平有限(PS:不是一名前端，也没系统的学习前端呢），喜欢的同学可以自己做二开，能提交代码当然是最好哒。
+
+#### 更新小建议
+##### 2022年7月7日 适配评论模块暗色模式
+- 为更好的适配暗色模式，建议将评论模块改为 `halo-comment-normal`：
+  1. 进入后台 -> 系统 -> 博客设置 -> 评论设置
+  2. 将 `评论模块 JS` 修改为：`//unpkg.com/halo-comment-normal@latest/dist/halo-comment.min.js` 

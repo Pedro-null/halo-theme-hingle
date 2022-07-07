@@ -14,6 +14,14 @@ var Paul_Hingle = function (config) {
     var body = document.body;
     var content = ks.select(".post-content:not(.is-special), .page-content:not(.is-special)");
 
+    //如果开启了评论
+    if (document.querySelector("halo-comment")){
+        var comment_on = true;
+        var comment_box = document.querySelector("halo-comment").shadowRoot.querySelector("#halo-comment");
+    }else{
+        comment_on = false;
+    };
+
     // 菜单按钮
     this.header = function () {
         var menu = document.getElementsByClassName("head-menu")[0];
@@ -36,10 +44,18 @@ var Paul_Hingle = function (config) {
     this.night = function () {
         if(body.classList.contains("dark-theme")){
             body.classList.remove("dark-theme");
+            if(comment_on){
+                comment_box.classList.remove("dark");
+                comment_box.classList.add("light");
+            }
             document.cookie = "night=false;" + "path=/;" + "max-age=21600";
         }
         else{
             body.classList.add("dark-theme");
+            if(comment_on){
+                comment_box.classList.remove("light");
+                comment_box.classList.add("dark");
+            }
             document.cookie = "night=true;" + "path=/;" + "max-age=21600";
         }
     };
@@ -146,15 +162,27 @@ var Paul_Hingle = function (config) {
 
         if(document.cookie.indexOf("night") === -1 && (hour <= 5 || hour >= 22)){
             document.body.classList.add("dark-theme");
+            if(comment_on){
+                comment_box.classList.remove("light");
+                comment_box.classList.add("dark");
+            }
             document.cookie = "night=true;" + "path=/;" + "max-age=21600";
         }
     }
     else if(document.cookie.indexOf("night") !== -1){
         if(document.cookie.indexOf("night=true") !== -1){
             document.body.classList.add("dark-theme");
+            if(comment_on){
+                comment_box.classList.remove("light");
+                comment_box.classList.add("dark");
+            }
         }
         else{
             document.body.classList.remove("dark-theme");
+            if(comment_on){
+                comment_box.classList.remove("dark");
+                comment_box.classList.add("light");
+            }
         }
     }
 
