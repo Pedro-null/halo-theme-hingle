@@ -24,3 +24,7 @@ ul {
     margin-inline-end: 0px;
     padding-inline-start: 40px;
 }
+
+.page-navigator {
+    margin-top: auto;
+}
