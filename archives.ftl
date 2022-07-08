@@ -1,8 +1,12 @@
 <#include "module/macro.ftl">
 <@layout title="归档 - ${blog_title!}">
 
+<head>
+    <link rel="stylesheet" href="${theme_base!}/source/css/archives.css">
+</head>
+
 <main>
-    <style>
+    <#--  <style>
         .time-title:before{
             content: "#";
             color: #6f9fc7;
@@ -18,9 +22,9 @@
             animation: fade-in-bottom .3s both;
             -webkit-animation: fade-in-bottom .3s both;
         }
-    </style>
+    </style>  -->
     <div class="wrap min">
-        <section class="home-posts">
+        <#--  <section class="home-posts">
                 <@postTag method="archiveMonth">
                 <#list archives as archive>
                 <h1 class="time-title">${archive.year?c}-${archive.month?c}</h1>                   
@@ -29,8 +33,6 @@
                             <h2>
                                 <a href="${post.fullPath!}">${post.title}</a>
                             </h2>
-                            <#--  文章摘要  -->
-                            <#--  <p> ${post.summary!} </p>  -->
                             <div class="post-meta">
                                 <time class="date">${post.createTime?string["yyyy.MM.dd"]!}</time>
                                 <#if (post.categories)?? && post.categories?size !=0>
@@ -46,7 +48,20 @@
                     </#list> 
                 </#list>
             </@postTag>                   
-        </section>
+        </section>  -->
+
+        <div class="post-archive">
+            <@postTag method="archiveYear">
+                <#list archives as archive>
+                    <h2>${archive.year?c}</h2>
+                        <ul class="listing">
+                            <#list archive.posts as post>
+                                <li><span class="date">${post.createTime?string["yyyy年MM月dd日"]!}</span><a href="${post.fullPath!}" title="${post.title}">${post.title}</a></li>
+                            </#list>
+                        </ul>
+                </#list>
+            </@postTag>                        
+        </div>
 
         <#--  分页  -->
         <section class="page-navigator">
@@ -68,63 +83,8 @@
                         </a>
                     </#if>
                 </@paginationTag>
-            <#--  <#else>
-                <span>当前只有一页</span>  -->
             </#if>
-        </section>
-
-        <#--  <section class="page-navigator">
-            <%- paginator({
-                prev_text: "«",
-                next_text: "»"
-            }) %>
-        </section>  -->
+        </section>        
     </div>
 </main>
-
-    <#--  <h1>归档</h1>
-    <ul>
-        <#list archives as archive>
-            <h2>${archive.year?c}</h2>
-            <#list archive.posts as post>
-                <li>
-                    <a href="${post.fullPath!}">${post.title!}</a>
-                </li>
-            </#list>
-        </#list>
-    </ul>
-
-    <h1>分页</h1>
-
-    <#if posts.totalPages gt 1>
-        <ul>
-            <@paginationTag method="archives" page="${posts.number}" total="${posts.totalPages}" display="3">
-                <#if pagination.hasPrev>
-                    <li>
-                        <a href="${pagination.prevPageFullPath!}">
-                            上一页
-                        </a>
-                    </li>
-                </#if>
-                <#list pagination.rainbowPages as number>
-                    <li>
-                        <#if number.isCurrent>
-                            <span class="current">第 ${number.page!} 页</span>
-                        <#else>
-                            <a href="${number.fullPath!}">第 ${number.page!} 页</a>
-                        </#if>
-                    </li>
-                </#list>
-                <#if pagination.hasNext>
-                    <li>
-                        <a href="${pagination.nextPageFullPath!}">
-                            下一页
-                        </a>
-                    </li>
-                </#if>
-            </@paginationTag>
-        </ul>
-    <#else>
-        <span>当前只有一页</span>
-    </#if>  -->
 </@layout>

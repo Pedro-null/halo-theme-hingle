@@ -1,0 +1,26 @@
+.post-archive .date {
+    padding-right: .7em;
+}
+
+.post-archive {
+/*     font-size: 15px; */
+    line-height: 2;
+    padding-bottom: .8em;
+    font-family: PingFangSC-Regular,Helvetica,"Helvetica Neue","Segoe UI","Hiragino Sans GB","Source Han Sans CN","Microsoft YaHei",STHeiti,"WenQuanYi Micro Hei",sans-serif!important;
+
+}
+
+.post-archive h2 {
+    margin: 0;
+    font: bold 25px/1.1 ff-tisa-web-pro,Cambria,"Times New Roman",Georgia,Times,sans-serif;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
