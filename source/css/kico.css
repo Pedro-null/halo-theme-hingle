@@ -163,16 +163,16 @@ em, mark, kbd{
     border-radius: .5em;
 }
 
-em{
+/* em{
     color: #fff;
     font-style: normal;
     background-color: #3498db;
     background-color: var(--primary);
-}
-em.red{ background: var(--red) }
-em.yellow{ background: var(--yellow) }
-em.blue{ background: var(--blue) }
-em.green{ background: var(--green) }
+} */
+/* em.red{ background: var(--red) } */
+/* em.yellow{ background: var(--yellow) } */
+/* em.blue{ background: var(--blue) } */
+/* em.green{ background: var(--green) } */
 
 kbd{
     color: #fff;

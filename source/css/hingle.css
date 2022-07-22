@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: normal }
 
 hr{ border-color: #eee }
 
-em{ background: #6f9fc7 }
+/* em{ background: #6f9fc7 } */
 
 .btn{
     color: #fff;
