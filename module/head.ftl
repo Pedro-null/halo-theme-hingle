@@ -3,8 +3,8 @@
     
     <link rel="icon" href="${blog_logo!}" sizes="192x192"/>
 
-    <link rel="stylesheet" href="${theme_base!}/source/css/kico.css"/>
-    <link rel="stylesheet" href="${theme_base!}/source/css/hingle.css"/>
+    <link rel="stylesheet" href="${theme_base!}/source/css/kico.css?v=${theme.version!}"/>
+    <link rel="stylesheet" href="${theme_base!}/source/css/hingle.css?v=${theme.version!}"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css"/>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
@@ -239,8 +239,8 @@
 
         <#--  KaTex 公式渲染  -->
         <#if settings.KaTex_plugin!false>
-            <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css" rel="stylesheet">
-            <script src="${theme_base!}/source/plugins/katex/dist/katex.min.js"></script>
+            <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css?v=${theme.version!}" rel="stylesheet">
+            <script src="${theme_base!}/source/plugins/katex/dist/katex.min.js?v=${theme.version!}"></script>
         </#if>
     
     </#if>    

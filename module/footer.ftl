@@ -34,8 +34,8 @@
     </div>
 </footer>
 
-<script src="${theme_base!}/source/js/kico.js"></script>
-<script src="${theme_base!}/source/js/hingle.js"></script>
+<script src="${theme_base!}/source/js/kico.js?v=${theme.version!}"></script>
+<script src="${theme_base!}/source/js/hingle.js?v=${theme.version!}"></script>
 <script> 
     let config = JSON.stringify({night: ${settings.night?c}, copyright: ${settings.copyright?c}});
     var hingle = new Paul_Hingle(config);
