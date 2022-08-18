@@ -63,8 +63,9 @@
             </@postTag>                        
         </div>
 
+        <#--  2022年8月18日 修改 分页在此页面无作用  -->
         <#--  分页  -->
-        <section class="page-navigator">
+        <#--  <section class="page-navigator">
             <#if posts.totalPages gt 1>
                 <@paginationTag method="archives" page="${posts.number}" total="${posts.totalPages}" display="3">
                     <#if pagination.hasPrev>
@@ -84,7 +85,7 @@
                     </#if>
                 </@paginationTag>
             </#if>
-        </section>        
+        </section>          -->
     </div>
 </main>
 </@layout>
