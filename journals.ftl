@@ -24,7 +24,7 @@
         <#--  分页  -->
         <section class="page-navigator">
             <#if journals.totalPages gt 1>
-                <@paginationTag method="journals" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <@paginationTag method="journals" page="${journals.number}" total="${journals.totalPages}" display="3">
                     <#if pagination.hasPrev>
                         <a class="extend prev" rel="prev" href="${pagination.prevPageFullPath!}">«</a>
                     </#if>

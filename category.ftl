@@ -34,7 +34,7 @@
         <#--  分页  -->
         <section class="page-navigator">
             <#if posts.totalPages gt 1>
-                <@paginationTag method="categoryPosts" page="${posts.number}" total="${posts.totalPages}" display="3">
+                <@paginationTag method="categoryPosts" slug="${category.slug!}" page="${posts.number}" total="${posts.totalPages}" display="3">
                     <#if pagination.hasPrev>
                         <a class="extend prev" rel="prev" href="${pagination.prevPageFullPath!}">«</a>
                     </#if>

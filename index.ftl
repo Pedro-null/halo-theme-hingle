@@ -11,7 +11,6 @@
         </section>
 
         <#--  文章列表  -->
-
         <section class="home-posts">
             <#list posts.content as post>
                 <#--  <li>
