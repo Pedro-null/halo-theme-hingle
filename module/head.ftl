@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="${theme_base!}/source/css/kico.css?v=${theme.version!}"/>
     <link rel="stylesheet" href="${theme_base!}/source/css/hingle.css?v=${theme.version!}"/>
-    <link rel="stylesheet" href="//apps.bdimg.com/libs/fontawesome/4.2.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
     <meta property="og:site_name" content="${blog_title!}">
