@@ -5,7 +5,7 @@
 
     <link rel="stylesheet" href="${theme_base!}/source/css/kico.css?v=${theme.version!}"/>
     <link rel="stylesheet" href="${theme_base!}/source/css/hingle.css?v=${theme.version!}"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="//unpkg.com/@fortawesome/fontawesome-free@5.12.1/css/all.min.css"/>
 
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
     <meta property="og:site_name" content="${blog_title!}">
