@@ -47,35 +47,6 @@
         -->
         <script src="https://cdn.staticfile.org/highlight.js/10.0.0/highlight.min.js"></script>
 
-        <script>
-            var thisCodes = new Set();
-            var codes = document.querySelectorAll("pre > code");
-            for (var i = 0, len = codes.length; i < len; i++) {
-                thisCodes.add(codes[i].className.slice(9));  //language-python
-            }
-            console.log(thisCodes);
-
-            if (thisCodes.size) {
-                var src = 'https://cdn.staticfile.org/highlight.js/10.0.0/highlight.min.js';
-                console.log(src);
-                var s = document.createElement('script');
-                s.src = src;
-                document.head.appendChild(s);
-
-                thisCodes.forEach((i) => {
-                    src = 'https://cdn.staticfile.org/highlight.js/10.0.0/languages/' + i + '.min.js';
-                    console.log(src);
-                    s = document.createElement('script');
-                    s.src = src;
-                    document.head.appendChild(s);
-                });
-
-                codes.forEach((i) => {
-                    hljs.highlightBlock(i);
-                });
-            }
-        </script>
-
         <#--  KaTex 公式渲染  -->
         <#if settings.KaTex_plugin!false>
             <link href="${theme_base!}/source/plugins/katex/dist/katex.min.css?v=${theme.version!}" rel="stylesheet">
