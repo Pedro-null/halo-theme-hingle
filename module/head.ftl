@@ -28,9 +28,9 @@
     <script>isPost = true;</script>
     
     <#--代码高亮用到的CSS-->
-        <link href="https://cdn.staticfile.org/highlight.js/10.0.0/styles/${settings.code_css!'github.min.css'}" rel="stylesheet">
+        <link href="https://cdn.staticfile.org/highlight.js/11.9.0/styles/${settings.code_css!'github.min.css'}" rel="stylesheet">
 
-        <script src="https://cdn.staticfile.org/highlight.js/10.0.0/highlight.min.js"></script>
+        <script src="https://cdn.staticfile.org/highlight.js/11.9.0/highlight.min.js"></script>
 
         <script>hljs.highlightAll();</script>
 
